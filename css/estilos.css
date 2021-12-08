@@ -1,0 +1,244 @@
+* /* selector global */{
+    margin: 0;
+    padding: 0;
+   
+    
+}
+
+body{
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #76c5c1 0%, #3eadcf 74%);
+    font-family: 'Comforter Brush', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Mohave', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.center{
+    text-align: center;
+    justify-content: center;
+}
+
+
+/*menu*/
+nav{
+    background: rgb(238, 213, 213);
+    height: 1000%;
+    max-width: 1000%;
+    margin-left: auto;
+    margin-top: auto;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block; /*para que se pongan en fila*/
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: black;
+    font-size: 18px; 
+    border-radius: 3px;
+    text-decoration: none;
+
+}
+li a.ctive, li a:hover{
+    background: rgb(184, 121, 39);
+    transition: 0.5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+    
+}
+#check{
+    display: none;
+}
+
+/* BANNER */
+section.banner{
+    background: pink;
+    padding: 3rem 0;
+}
+.conteinerB{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+}
+.col1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgBanner{
+    width: 70%;
+}
+
+
+/*responsive del menu*/
+/* responsive tablet */
+/* @media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+} */
+
+/* responsive celular */
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;  /*ANCHO QUE OCUPA LA PAGINA EL MENU EN EL CEL*/
+        height: 100VH;
+        background-color: rgb(143, 125, 125);
+        top: 80%;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    /* li a:hover, ul li a{
+        font-size: 20px;
+    } */
+    li a:hover, li a.active{
+        background: none;
+        color: blue;
+    }
+    #check:checked ∼ ul{
+        left: 0;
+    }
+}
+
+
+/*CONTENIDO*/
+
+.contenedor{
+    display: grid;
+    overflow: auto;
+    grid-template-columns: repeat(3,0.5fr);
+    padding: 3rem 0;
+}
+.sub-conteiner , .medios{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 15%;
+    font-size: 20px;
+}
+.sub-titulo{
+    display: inline;
+    place-items: center;
+    background-color: rgb(18, 46, 202);
+}
+.productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-area: 1;
+    margin: 0 auto;
+    width: 90%; 
+    justify-items: center;  
+    align-items: center; 
+}
+.sub-productos{
+    width: 70%;
+    height: 400px;
+    margin: 90px auto; 
+    outline: 3px solid;
+    border-radius: 50px;
+
+}
+.sub-productos > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+
+} 
+
+
+/*Informacion*/
+.sub-informacion{
+    background-color: rgb(0, 255, 200);
+    border: 1px solid rgb(70, 69, 69);
+    color: black;
+    margin: 60px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+h3{
+    text-align: center;
+}
+
+/* MEDIOS DE PAGO */
+    
+.medios >img{
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/*animaciones*/
+h1 {
+    animation-duration: 4s;
+    animation-name: aparecer;
+}
+@keyframes aparecer{
+    from {
+        opacity: 0;
+        transform: translate(-800);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Area como comprar */
+.sub-infoc{
+    margin: 50px;
+}
+
+/* Formulario */
+.formulario{
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    display: flex;
+    min-height: 100vh;
+}
+.form{
+    background-color: white;
+    margin: auto;
+    width: 50%;
+    max-width: 400%;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+
